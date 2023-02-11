@@ -1,46 +1,29 @@
-# finance
+# Finance - Gestão inteligente
 
-This template should help get you started developing with Vue 3 in Vite.
+![status](https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO-%23E8FF01&?style=flat-square&logo=appveyor)
 
-## Recommended IDE Setup
+<div align="center">
+  <img src="https://i.imgur.com/3qZWYcL_d.webp?maxwidth=760&fidelity=grand">
+</div>
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+<br>
 
-## Type Support for `.vue` Imports in TS
+# Descrição
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+## • Sobre o projeto
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+A Finance trata-se de um projeto Open Source de gestão financeira pessoal. O projeto tem como principal objeto auxiliar pessoas a construírem e gerenciar seu patrimônio financeiro, buscando facilitar a tomada de decisões, organização financeira e principalmente, tornar a gestão financeira pessoal algo atrativo e viável.
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+<br>
 
-## Customize configuration
+## • Ferramentas utilizadas
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+[Vue.js](https://vuejs.org/) - Framework Frontend; <br>
+[Typescript](https://www.typescriptlang.org/) - Linguagem de programação principal;
 
-## Project Setup
+<br>
 
-```sh
-npm install
-```
+## • Autores
 
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+* **Gabriel Carvalho** - *Desenvolvedor FullStack* - [Acessar protfólio](https://gabrielcarvalho.tech)
+* **Diogo Espindola** - *Desenvolvedor Frontend* - [Perfil Github](https://github.com/rissollis)
