@@ -1,20 +1,21 @@
-/** @type {import('tailwindcss').Config} */
+/** @type {import('tailwindcss').Config} **/
 module.exports = {
   content: ["./index.html", "./src/**/*.{vue, js, ts, jsx, tsx}"],
   theme: {
     extend: {
       fontFamily: {
-        financePlex: ["IBM Plex Sans", "sans-serif;"],
+        financePlex: ['Be Vietnam Pro', "sans-serif",],
       },
       maxWidth: {
         "2700px": "168.75",
         "200px": "8rem",
       },
       colors: {
-        blackBg: "#1A1A1A",
-        dourado: "#A5834E",
-        douradoHover: "#a5844ec9",
-        douradoActive: "#b88b42",
+        white: "#ffffff",
+        honeyDew: "#e8fcf2",
+        lightSeaGreen: "#20b2aa",
+        smokyBlack: "#131200",
+        midnightGreen: "#095256",
       },
     },
   },

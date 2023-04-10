@@ -1,44 +1,42 @@
 <script setup lang="ts"></script>
 
 <template>
-  <header id="header" class="w-full border-b border-bg-dourado">
-    <div
-      class="w-full max-w-2700px flex items-center justify-between px-20 py-5"
-    >
+  <header id="header" class="w-full border-b ">
+    <div class="w-full max-w-2700px flex items-center justify-between px-20 py-4">
       <div class="">
         <router-link class="inline-block" to="/">
           <img
             class="w-full max-w-200px"
-            src="/icons/header-icon-dourado.png"
+            src="/icons/logo_gradient.png"
             alt="icone finance"
           />
         </router-link>
       </div>
       <nav class="">
-        <ul class="uppercase flex">
+        <ul class="flex">
           <router-link
-            class="hover:bg-dourado px-10 py-5 active:bg-douradoActive mr-16 inline-block"
+            class="transition-colors hover:text-teal-400 px-10 py-2 active:bg-teal-500Active mr-16 inline-block font-light"
             to="#"
           >
-            <li class="tracking-widest">Arroz</li>
+            <li class="tracking-widest">Lorem</li>
           </router-link>
           <router-link
-            class="hover:bg-dourado px-10 py-5 active:bg-douradoActive mr-16"
+            class="transition-colors hover:text-teal-400 px-10 py-2 active:bg-teal-500Active mr-16 inline-block font-light"
             to="#"
           >
-            <li class="tracking-widest">Arroz</li>
+            <li class="tracking-widest">Lorem</li>
           </router-link>
           <router-link
-            class="hover:bg-dourado px-10 py-5 active:bg-douradoActive"
+            class="transition-colors hover:text-teal-400 px-10 py-2 active:bg-teal-500Active mr-16 inline-block font-light"
             to="#"
           >
-            <li class="tracking-widest">Arroz</li>
+            <li class="tracking-widest">Lorem</li>
           </router-link>
         </ul>
       </nav>
       <div class="">
         <button
-          class="bg-dourado hover:bg-douradoHover active:bg-douradoActive px-8 py-3"
+          class="transition-colors text-slate-100 rounded-full bg-lightSeaGreen hover:bg-midnightGreen Hover active:bg-midnightGreen Active px-6 py-2"
         >
           Registrar-se
         </button>
