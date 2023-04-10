@@ -3,7 +3,7 @@
 ![status](https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO-%23E8FF01&?style=flat-square&logo=appveyor)
 
 <div align="center">
-  <img src="https://i.imgur.com/3qZWYcL_d.webp?maxwidth=760&fidelity=grand">
+  <img src="https://i.imgur.com/5HdBQAX_d.webp?maxwidth=760&fidelity=grand">
 </div>
 
 <br>
