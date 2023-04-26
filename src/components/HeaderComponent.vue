@@ -2,7 +2,9 @@
 
 <template>
   <header id="header" class="w-full border-b ">
-    <div class="w-full max-w-2700px flex items-center justify-between px-20 py-4">
+    <div
+      class="w-full max-w-2700px flex items-center justify-between px-20 py-4 bg-white"
+    >
       <div class="">
         <router-link class="inline-block" to="/">
           <img
