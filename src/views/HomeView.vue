@@ -2,6 +2,181 @@
 
 <template>
   <main>
-    <h1>main</h1>
+    <section class="px-20 flex bg-slate-100 relative after:bg-gray-300 after:h-px after:w-full after:absolute after:bottom-0">
+      <div class="flex flex-col justify-around">
+        <div class="relative w-4/5">
+          <h1 class="text-5xl font-semibold text-midnightGreen"><span class="text-lightSeaGreen">O controle</span> total das suas finanças na palma da sua mão</h1>
+          <img src="https://organizze.com.br/build/_assets/traced-border@2x-BLHJJMC7.png" alt="" class="absolute w-60 top-11">
+        </div>
+        <div>
+          <p>
+            Organize seu dinheiro em tempo real com com uma solução completa, prática e segura, e garanta o controle total das suas finanças.
+          </p>
+        </div>
+        <div>
+          <router-link to="/about">
+            <button class="bg-midnightGreen text-white px-5 py-4 rounded-xl hover:bg-lightSeaGreen ease-in-out duration-300">Organizar minhas finanças <i class="pi pi-arrow-right ml-2 bg-lightSeaGreen rounded-lg p-3"></i></button>
+          </router-link>
+        </div>
+        <div class="flex">
+          <div class="flex items-center">
+            <div class="bg-green-200 rounded-xl p-17px flex items-center justify-center mx-2">
+              <i class="pi pi-lock text-3xl"></i>
+            </div>
+            <div>
+              <p>Segurança dos seus dados em primeiro lugar.</p>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <div class="bg-green-200 rounded-xl p-17px flex items-center justify-center mx-2">
+              <i class="pi pi-desktop text-3xl"></i>
+            </div>
+            <div>
+              <p>Acesse quando quiser, no celular ou computador.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <img src="https://organizze.com.br/build/_assets/hero-mockup-app-organizze-OSCC5ZCI.webp" alt="protótipo do site">
+      </div>
+    </section>
+    <section class="px-20">
+      <div class="flex items-center">
+        <div>
+          <img src="https://organizze.com.br/build/_assets/phone01-QOE2JQZC.webp" alt="">
+        </div>
+        <div>
+          <div>
+            <p class="font-extralight">Organize suas finanças</p>
+          </div>
+          <div>
+            <h1 class="text-midnightGreen font-bold text-5xl my-6">O guia para o seu sucesso financeiro</h1>
+          </div>
+          <div class="flex flex-wrap">
+            <div class="flex gap-10">
+              <div class="cardFinancas">
+                <div>
+                  <p class="cardFinancaNumber">01</p>
+                </div>
+                <div>
+                  <h2 class="font-semibold text-midnightGreen my-3">Suas contas e cartões num só lugar</h2>
+                </div>
+                <div>
+                  <p>
+                    Comece cadastrando suas contas e cartões para ter uma visão mais clara das suas finanças.
+                  </p>
+                </div>
+              </div>
+              <div class="cardFinancas">
+                <div>
+                  <p class="cardFinancaNumber">02</p>
+                </div>
+                <div>
+                  <h2 class="font-semibold text-midnightGreen my-3">Registre todos os seus gastos</h2>
+                </div>
+                <div>
+                  <p>
+                    Garanta uma previsibilidade financeira poderosa cadastrando suas despesas em tempo real, de onde você estiver.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex gap-10 mt-7">
+              <div class="cardFinancas">
+                <div>
+                  <p class="cardFinancaNumber">03</p>
+                </div>
+                <div>
+                  <h2 class="font-semibold text-midnightGreen my-3">Saiba o destino de cada centavo</h2>
+                </div>
+                <div>
+                  <p>
+                    Mantenha tudo sob controle informando sua renda e ganhos extras para ter um ponto de partida.
+                  </p>
+                </div>
+              </div>
+              <div class="cardFinancas">
+                <div>
+                  <p class="cardFinancaNumber">04</p>
+                </div>
+                <div>
+                  <h2 class="font-semibold text-midnightGreen my-3">Transformando em hábito</h2>
+                </div>
+                <div>
+                  <p>
+                    Lance os gastos do dia a dia, acompanhe os relatórios sempre que possível e assuma o controle do seu dinheiro.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div>
+        <div>
+          <div>
+            <p>Segurança em primeiro lugar</p>
+          </div>
+          <div>
+            <h1>A segurança que você precisa para evoluir a sua gestão</h1>
+          </div>
+          <div>
+            <div>
+              <div class="">
+                <i class="pi pi-dollar font-extrabold text-amber-800 text-2xl"></i>
+              </div>
+              <div class="">
+                <p>Nós não pedimos sua senha do banco. Nem hoje, nem nunca!</p>
+              </div>
+            </div>
+            <div>
+              <div class="">
+                <i class="pi pi-dollar font-extrabold text-amber-800 text-2xl"></i>
+              </div>
+              <div class="">
+                <p>Tenha a facilidade de registrar e acompanhar seus gastos a qualquer momento</p>
+              </div>
+            </div>
+            <div>
+              <div class="">
+                <i class="pi pi-dollar font-extrabold text-amber-800 text-2xl"></i>
+              </div>
+              <div class="">
+                <p>Gerencie as faturas de todos os sesu cartões de crédito num único lugar!</p>
+              </div>
+            </div>
+            <div>
+              <div class="">
+                <i class="pi pi-dollar font-extrabold text-amber-800 text-2xl"></i>
+              </div>
+              <div class="">
+                <p>Receba alertas de contas a pagar e nunca mais sofra com juros</p>
+              </div>
+            </div>
+            <div>
+              <div class="">
+                <i class="pi pi-dollar font-extrabold text-amber-800 text-2xl"></i>
+              </div>
+              <div class="">
+                <p>Importe os dados da sua planilha financeira e não comece do zero</p>
+              </div>
+            </div>
+            <div>
+              <router-link to="/">
+                <button class="">Gerenciar finanças</button>
+              </router-link>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="">
+            <img src="https://organizze.com.br/build/_assets/organizzeTamplateWeb-B3IDUPTB.png" alt="modelo dashboard" class="">
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </template>

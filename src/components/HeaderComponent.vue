@@ -1,9 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-  <header id="header" class="w-full border-b ">
+  <header id="header" class="w-full flex justify-center">
     <div
-      class="w-full max-w-2700px flex items-center justify-between px-20 py-4 bg-white"
+      class="w-full max-w-2700px flex items-center justify-between px-20 py-4 bg-white border-b"
     >
       <div class="">
         <router-link class="inline-block" to="/">

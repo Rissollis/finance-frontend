@@ -2,34 +2,30 @@
 
 <template>
   <footer id="footer" class="bg-white px-10 pt-20 pb-8">
-    <!-- <div>
-      <img class="w-full max-w-200px align" src="/icons/logo_gradient.png" alt="">
-    </div> -->
-
     <h1 class="font-bold text-2xl pb-2 px-2 text-lightSeaGreen">Contato</h1>
     <div class="block justify-between md:flex">
       <div class="flex">
         <div class="block space-y-1 p-2">
-          <p class="font-medium text-m">Gabriel</p>
-          <p class="font-medium text-m">Diogo</p>
+          <p class="font-medium text-m">Gabriel Carvalho</p>
+          <p class="font-medium text-m">Diogo Espindola</p>
         </div>
         <div class="block px-2 space-y-1 p-2">
-          <p class="font-light text-m">gabriel@contato</p>
-          <p class="font-light text-m">diogo@contato</p>
+          <p class="font-light text-m">gabriel_carvalho.contato@outlook.com</p>
+          <p class="font-light text-m">diogoespindoladasilva@outlook.com</p>
         </div>
 
         <div class="inline-block px-2 p-2 space-y-1">
           <a
-            src="https://github.com/gabriel-cheng"
+            href="https://github.com/gabriel-cheng"
             target="_blank"
             class="block font-bold text-m"
-            >github</a
+            >GitHub</a
           >
           <a
-            src="https://github.com/Rissollis"
+            href="https://github.com/Rissollis"
             target="_blank"
             class="block font-bold text-m"
-            >github</a
+            >GitHub</a
           >
         </div>
       </div>
@@ -47,7 +43,7 @@
         target="_blank"
         >repositório do projeto</a
       >
-      <img src="../../public/icons/github_icon.png" class="h-6" />
+      <img src="/icons/github_icon.png" class="h-6" />
     </div>
   </footer>
 </template>

@@ -7,7 +7,7 @@ module.exports = {
         financePlex: ['Be Vietnam Pro', "sans-serif",],
       },
       maxWidth: {
-        "2700px": "168.75",
+        "2700px": "168.75rem",
         "200px": "8rem",
       },
       colors: {
@@ -17,6 +17,9 @@ module.exports = {
         smokyBlack: "#131200",
         midnightGreen: "#095256",
       },
+      padding: {
+        "17px": "0.7rem"
+      }
     },
   },
   plugins: [],

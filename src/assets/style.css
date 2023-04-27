@@ -8,5 +8,10 @@
   * {
     @apply font-financePlex;
   }
-
+  .cardFinancas {
+    @apply w-96;
+  }
+  .cardFinancaNumber {
+    @apply bg-lightSeaGreen rounded-xl w-10 h-10 flex items-center justify-center text-white font-semibold;
+  }
 }

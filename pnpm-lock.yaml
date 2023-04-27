@@ -4,6 +4,9 @@ dependencies:
   pnpm:
     specifier: ^8.0.0
     version: 8.0.0
+  primeicons:
+    specifier: ^6.0.1
+    version: 6.0.1
   vue:
     specifier: ^3.2.45
     version: 3.2.47
@@ -2096,6 +2099,10 @@ packages:
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
+
+  /primeicons@6.0.1:
+    resolution: {integrity: sha512-KDeO94CbWI4pKsPnYpA1FPjo79EsY9I+M8ywoPBSf9XMXoe/0crjbUK7jcQEDHuc0ZMRIZsxH3TYLv4TUtHmAA==}
+    dev: false
 
   /punycode@2.3.0:
     resolution: {integrity: sha512-rRV+zQD8tVFys26lAGR9WUuS4iUAngJScM+ZRSKtvl5tKeZ2t5bvdNFdNHBW9FWR4guGHlgmsZ1G7BSm2wTbuA==}
