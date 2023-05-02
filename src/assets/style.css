@@ -14,4 +14,16 @@
   .cardFinancaNumber {
     @apply bg-lightSeaGreen rounded-xl w-10 h-10 flex items-center justify-center text-white font-semibold;
   }
+  .segCardContainer {
+    @apply flex items-center;
+  }
+  .pi-dollar {
+    @apply mr-3;
+  }
+  .containerControlIcons {
+    @apply bg-lightSeaGreen w-16 h-16 flex justify-center items-center rounded-2xl;
+  }
+  .controlIcons {
+    @apply text-3xl text-midnightGreen;
+  }
 }

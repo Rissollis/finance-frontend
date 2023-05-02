@@ -2,8 +2,8 @@
 
 <template>
   <main>
-    <section class="px-20 flex bg-slate-100 relative after:bg-gray-300 after:h-px after:w-full after:absolute after:bottom-0">
-      <div class="flex flex-col justify-around">
+    <section class="flex bg-slate-100 relative after:bg-gray-300 after:h-px after:w-full after:absolute after:bottom-0">
+      <div class="px-20 flex flex-col justify-around">
         <div class="relative w-4/5">
           <h1 class="text-5xl font-semibold text-midnightGreen"><span class="text-lightSeaGreen">O controle</span> total das suas finanças na palma da sua mão</h1>
           <img src="https://organizze.com.br/build/_assets/traced-border@2x-BLHJJMC7.png" alt="" class="absolute w-60 top-11">
@@ -114,66 +114,168 @@
         </div>
       </div>
     </section>
-    <section>
-      <div>
+    <section class="pl-20 bg-maroon">
+      <div class="flex items-center">
         <div>
           <div>
             <p>Segurança em primeiro lugar</p>
           </div>
-          <div>
-            <h1>A segurança que você precisa para evoluir a sua gestão</h1>
+          <div class="w-3/4">
+            <h1 class="mt-3 mb-10 text-5xl text-amber-800">A segurança que você precisa para evoluir a sua gestão</h1>
           </div>
-          <div>
-            <div>
-              <div class="">
+          <div class="flex flex-col gap-5">
+            <div class="segCardContainer">
+              <div>
                 <i class="pi pi-dollar font-extrabold text-amber-800 text-2xl"></i>
               </div>
-              <div class="">
+              <div>
                 <p>Nós não pedimos sua senha do banco. Nem hoje, nem nunca!</p>
               </div>
             </div>
-            <div>
-              <div class="">
+            <div class="segCardContainer">
+              <div>
                 <i class="pi pi-dollar font-extrabold text-amber-800 text-2xl"></i>
               </div>
-              <div class="">
+              <div>
                 <p>Tenha a facilidade de registrar e acompanhar seus gastos a qualquer momento</p>
               </div>
             </div>
-            <div>
-              <div class="">
+            <div class="segCardContainer">
+              <div>
                 <i class="pi pi-dollar font-extrabold text-amber-800 text-2xl"></i>
               </div>
-              <div class="">
+              <div>
                 <p>Gerencie as faturas de todos os sesu cartões de crédito num único lugar!</p>
               </div>
             </div>
-            <div>
-              <div class="">
+            <div class="segCardContainer">
+              <div>
                 <i class="pi pi-dollar font-extrabold text-amber-800 text-2xl"></i>
               </div>
-              <div class="">
+              <div>
                 <p>Receba alertas de contas a pagar e nunca mais sofra com juros</p>
               </div>
             </div>
-            <div>
-              <div class="">
+            <div class="segCardContainer">
+              <div>
                 <i class="pi pi-dollar font-extrabold text-amber-800 text-2xl"></i>
               </div>
-              <div class="">
+              <div>
                 <p>Importe os dados da sua planilha financeira e não comece do zero</p>
               </div>
             </div>
             <div>
               <router-link to="/">
-                <button class="">Gerenciar finanças</button>
+                <button class="bg-midnightGreen text-white w-56 h-12 rounded-lg hover:bg-lightSeaGreen duration-300">Gerenciar finanças</button>
               </router-link>
             </div>
           </div>
         </div>
         <div>
-          <div class="">
-            <img src="https://organizze.com.br/build/_assets/organizzeTamplateWeb-B3IDUPTB.png" alt="modelo dashboard" class="">
+          <div>
+            <img src="https://organizze.com.br/build/_assets/organizzeTamplateWeb-B3IDUPTB.png" alt="modelo dashboard">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mx-20">
+      <div>
+        <div class="mb-10">
+          <div class="text-center">
+            <p>Controle total</p>
+          </div>
+          <div class="text-center text-midnightGreen text-4xl font-bold">
+            <h1>Você, no controle das suas finanças</h1>
+          </div>
+        </div>
+        <div class="">
+          <div class="flex justify-between gap-48 mb-20">
+            <div class="">
+              <div class="">
+                <div class="mb-6 flex-wrap">
+                  <div class="containerControlIcons">
+                    <i class="controlIcons pi pi-chart-line"></i>
+                  </div>
+                </div>
+                <div class="">
+                  <p>
+                    Com seu dinheiro organizado fica muito mais fácil planejar o futuro. Para te ajudar, o Organizze te mostra previsões valiosas das suas finanças.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <div class="">
+                <div class="mb-6 flex-wrap">
+                  <div class="containerControlIcons">
+                    <i class="controlIcons pi pi-stopwatch"></i>
+                  </div>
+                </div>
+                <div class="">
+                  <p>
+                    Com seu dinheiro organizado fica muito mais fácil planejar o futuro. Para te ajudar, o Organizze te mostra previsões valiosas das suas finanças.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <div class="">
+                <div class="mb-6 flex-wrap">
+                  <div class="containerControlIcons">
+                    <i class="controlIcons pi pi-chart-bar"></i>
+                  </div>
+                </div>
+                <div class="">
+                  <p>
+                    Com seu dinheiro organizado fica muito mais fácil planejar o futuro. Para te ajudar, o Organizze te mostra previsões valiosas das suas finanças.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-48">
+            <div class="">
+              <div class="">
+                <div class="mb-6 flex-wrap">
+                  <div class="containerControlIcons">
+                    <i class="controlIcons pi pi-mobile"></i>
+                  </div>
+                </div>
+                <div class="">
+                  <p>
+                    Com seu dinheiro organizado fica muito mais fácil planejar o futuro. Para te ajudar, o Organizze te mostra previsões valiosas das suas finanças.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <div class="">
+                <div class="mb-6 flex-wrap">
+                  <div class="containerControlIcons">
+                    <i class="controlIcons pi pi-thumbs-up"></i>
+                  </div>
+                </div>
+                <div class="">
+                  <p>
+                    Com seu dinheiro organizado fica muito mais fácil planejar o futuro. Para te ajudar, o Organizze te mostra previsões valiosas das suas finanças.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <div class="">
+                <div class="mb-6">
+                  <div class="containerControlIcons">
+                    <i class="controlIcons pi pi-chart-line"></i>
+                  </div>
+                </div>
+                <div class="">
+                  <p>
+                    Com seu dinheiro organizado fica muito mais fácil planejar o futuro. Para te ajudar, o Organizze te mostra previsões valiosas das suas finanças.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

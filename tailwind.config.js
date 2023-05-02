@@ -16,6 +16,7 @@ module.exports = {
         lightSeaGreen: "#20b2aa",
         smokyBlack: "#131200",
         midnightGreen: "#095256",
+        maroon: "#FFFBF0",
       },
       padding: {
         "17px": "0.7rem"
