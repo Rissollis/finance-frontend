@@ -180,7 +180,7 @@
     </section>
     <section class="mx-20">
       <div>
-        <div class="mb-10">
+        <div class="mt-24 mb-10">
           <div class="text-center">
             <p>Controle total</p>
           </div>
