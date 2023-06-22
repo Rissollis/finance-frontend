@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <footer id="footer" class="bg-white px-10 pt-20 pb-8">
+  <footer id="footer" class="bg-white p-10 border-t-2">
     <h1 class="font-bold text-2xl pb-2 px-2 text-lightSeaGreen">Contato</h1>
     <div class="block justify-between md:flex">
       <div class="flex">
@@ -30,7 +30,7 @@
         </div>
       </div>
       <div class="max-w-xs text-right">
-        <p class="font-light text-m">
+        <p class="font-light text-sm">
           este é um projeto desenvolvido como trabalho de graduação para a FATEC
           de Araçatuba
         </p>
