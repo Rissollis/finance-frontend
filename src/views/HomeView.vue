@@ -184,15 +184,10 @@
 
     <section class="px-20 py-12 bg-slate-100">
       <div>
-<<<<<<< HEAD
         <div class="mt-24 mb-10">
           <div class="text-center">
-=======
-        <div class="mb-10">
-          <!-- <div class="text-center">
->>>>>>> master
             <p>Controle total</p>
-          </div> -->
+          </div>
           <div class="text-center text-midnightGreen text-4xl font-bold">
             <h1>Você, no controle das suas finanças</h1>
           </div>
