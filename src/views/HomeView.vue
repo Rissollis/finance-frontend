@@ -3,7 +3,7 @@
 <template>
   <main>
 
-    <section class="flex bg-slate-100 py-16 px-16 relative after:bg-gray-300 after:h-px after:w-full after:absolute after:bottom-0">
+    <section class="flex bg-slate-100 py-16 px-16">
       <div class=" space-y-6 px-20 flex flex-col justify-around">
         <div class="relative w-4/5">
           <h1 class="text-5xl font-semibold text-midnightGreen"><span class="text-lightSeaGreen">O controle</span> total das suas finanças na palma da sua mão</h1>
