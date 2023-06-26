@@ -4,10 +4,16 @@ const allReceitas = ref<Array<iReceitasAttrb>>([]);
 const allDespesas = ref<Array<iReceitasAttrb>>([]);
 const allReceber = ref<Array<iReceitasAttrb>>([]);
 
+const valoresReceitas: number[] = [];
+const valoresDespesas: number[] = [];
+const valoresReceber: number[] = [];
+
 onMounted(() => {
   getFinancas(allReceitas, "receitas");
   getFinancas(allDespesas, "despesas");
   getFinancas(allReceber, "receber");
+
+  valorTotal();
 });
 
 interface iReceitasAttrb {
@@ -55,6 +61,69 @@ async function modalController(modal: string) {
   }
 
   openOrCloseModal()
+}
+async function valorTotal() {
+  const allFinancasValues = await returnValores();
+  const totalReceitas = (document.querySelector(".totalReceitas") as HTMLParagraphElement);
+  const totalDespesas = (document.querySelector(".totalDespesas") as HTMLParagraphElement);
+  const totalReceber = (document.querySelector(".totalReceber") as HTMLParagraphElement);
+  let soma1 = 0;
+  let soma2 = 0;
+  let soma3 = 0;
+
+  for(let i of allFinancasValues[0]) {
+    soma1 += i;
+
+    totalReceitas.textContent = soma1.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+  }
+  for(let i of allFinancasValues[1]) {
+    soma2 += i;
+
+    totalDespesas.textContent = soma2.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+  }
+  for(let i of allFinancasValues[2]) {
+    soma3 += i;
+
+    totalReceber.textContent = soma3.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+  }
+}
+async function returnValores() {
+  const valoresReceitas: number[] = [];
+  const valoresDespesas: number[] = [];
+  const valoresReceber: number[] = [];
+
+  const receitasValues = await getRequest("receitas");
+  const despesasValues = await getRequest("despesas");
+  const receberValues = await getRequest("receber");
+
+  for(let i of receitasValues) {
+    for(let j of i.receitas) {
+      valoresReceitas.push(j.valor);
+    }
+  }
+  for(let i of despesasValues) {
+    for(let j of i.despesas) {
+      valoresDespesas.push(j.valor);
+    }
+  }
+  for(let i of receberValues) {
+    for(let j of i.receber) {
+      valoresReceber.push(j.valor);
+    }
+  }
+
+  return [valoresReceitas, valoresDespesas, valoresReceber];
+}
+async function getRequest(endp: string) {
+  const req = await fetch(`http://localhost:5000/financas/${endp}`, {
+    method: "GET",
+    headers: {
+      "authorization": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTc4ZmY4MDRlMjNjMThlNGQxNTE4MSIsInVzZXJuYW1lIjoicGF0aHljcm96OCIsImlhdCI6MTY4NzY1NDM5N30.g11k3WLwIvdP7B09Assy1ljfN4K84YkMUKNP4qbB230"
+    }
+  })
+  .then(e => e.json())
+
+  return req;
 }
 function openOrCloseModal() {
   const modalContainer = document.querySelector(".modalContainer") as HTMLDivElement;
@@ -118,6 +187,104 @@ async function deleteItem(endp: string, id: string) {
 
   return;
 }
+async function updateItem(endp: string, id: string) {
+  openOrCloseModal();
+  const submitFinancas = document.querySelector(".submitFinancas") as HTMLDivElement;
+  const valor = document.querySelector("#inputValor") as HTMLInputElement;
+  const nota = document.querySelector("#inputNota") as HTMLInputElement;
+  const baseurl = "http://localhost:5000/financas/";
+
+
+  if(endp == "receitas") {
+  }
+  switch(endp) {
+    case "receitas":
+      const resReceitas = await fetch(`${baseurl}/${endp}/${id}`, {
+        method: "GET",
+        headers: {
+          "authorization": `bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTc4ZmY4MDRlMjNjMThlNGQxNTE4MSIsInVzZXJuYW1lIjoicGF0aHljcm96OCIsImlhdCI6MTY4NzY1NDM5N30.g11k3WLwIvdP7B09Assy1ljfN4K84YkMUKNP4qbB230`
+        }
+      })
+      .then(e => e.json())
+      .then(e => e.receitas[0]);
+
+      valor.value = resReceitas.valor;
+      nota.value = resReceitas.nota;
+
+      submitFinancas.onclick = () => {
+        updateRequest("receitas", id, {
+          "receitas": [
+            {"valor": valor.value, "nota": nota.value}
+          ]
+        });
+      }
+      break;
+    case "despesas":
+      const resDespesas = await fetch(`${baseurl}/${endp}/${id}`, {
+        method: "GET",
+        headers: {
+          "authorization": `bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTc4ZmY4MDRlMjNjMThlNGQxNTE4MSIsInVzZXJuYW1lIjoicGF0aHljcm96OCIsImlhdCI6MTY4NzY1NDM5N30.g11k3WLwIvdP7B09Assy1ljfN4K84YkMUKNP4qbB230`
+        }
+      })
+      .then(e => e.json())
+      .then(e => e.despesas[0]);
+
+      valor.value = resDespesas.valor;
+      nota.value = resDespesas.nota;
+
+      submitFinancas.onclick = () => {
+        updateRequest("despesas", id, {
+          "despesas": [
+            {"valor": valor.value, "nota": nota.value}
+          ]
+        });
+      }
+      break;
+    case "receber":
+      const resReceber = await fetch(`${baseurl}/${endp}/${id}`, {
+        method: "GET",
+        headers: {
+          "authorization": `bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTc4ZmY4MDRlMjNjMThlNGQxNTE4MSIsInVzZXJuYW1lIjoicGF0aHljcm96OCIsImlhdCI6MTY4NzY1NDM5N30.g11k3WLwIvdP7B09Assy1ljfN4K84YkMUKNP4qbB230`
+        }
+      })
+      .then(e => e.json())
+      .then(e => e.receber[0]);
+
+      valor.value = resReceber.valor;
+      nota.value = resReceber.nota;
+
+      submitFinancas.onclick = () => {
+        updateRequest("receber", id, {
+          "receber": [
+            {"valor": valor.value, "nota": nota.value}
+          ]
+        });
+      }
+      break;
+    default:
+      alert("Nenhum clicado");
+      break;
+  }
+}
+async function updateRequest(endp: string, id: string, body: any) {
+  const token = sessionStorage.getItem("token");
+
+  const res = await fetch(`http://localhost:5000/financas/update/${endp}/${id}`, {
+    method: "PATCH",
+    body: JSON.stringify(body),
+    headers: {
+      "Content-Type": "Application/json",
+      "authorization": `bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTc4ZmY4MDRlMjNjMThlNGQxNTE4MSIsInVzZXJuYW1lIjoicGF0aHljcm96OCIsImlhdCI6MTY4NzY1NDM5N30.g11k3WLwIvdP7B09Assy1ljfN4K84YkMUKNP4qbB230`
+    }
+  })
+  .then(e => e.json())
+  .then((e) => {
+    console.log(e);
+  });
+
+  document.location.reload();
+  return res;
+}
 </script>
 
 <template>
@@ -127,10 +294,10 @@ async function deleteItem(endp: string, id: string) {
         <div class="">
           <div class="">
             <div class="">
-              <input type="number" name="" id="inputValor" class="border border-black mb-2 px-1" placeholder="Informe o valor outline-none">
+              <input type="number" name="" id="inputValor" class="border border-black mb-2 px-1 outline-none" placeholder="Informe o valor">
             </div>
             <div class="">
-              <input type="text" name="" id="inputNota" class="border border-black mb-3 px-1" placeholder="Informe uma nota outline-none">
+              <input type="text" name="" id="inputNota" class="border border-black mb-3 px-1 outline-none" placeholder="Informe uma nota">
             </div>
             <div class="submitFinancas flex justify-center">
               <button class="px-8 py-2 bg-lightSeaGreen text-white">Informar finança</button>
@@ -146,7 +313,7 @@ async function deleteItem(endp: string, id: string) {
       <div class="flex justify-center w-4/5 gap-5">
         <div class="dashCard bg-green-500 w-96 h-52 p-10 rounded-xl">
           <div class="mb-3">
-            <p class="inline text-4xl border-b-4 border-gray-500 font-bold mt-2">R$ <span class="">0,00</span></p>
+            <p class="totalReceitas inline text-2xl border-b-4 border-gray-500 font-bold mt-2"></p>
           </div>
           <div>
             <p class="text-xl">receita mensal</p>
@@ -154,7 +321,7 @@ async function deleteItem(endp: string, id: string) {
         </div>
         <div class="dashCard bg-red-500 w-96 h-52 p-10 rounded-xl">
           <div class="mb-3">
-            <p class="inline text-4xl border-b-4 border-gray-500 font-bold mt-2">R$ <span class="">0,00</span></p>
+            <p class="totalDespesas inline text-2xl border-b-4 border-gray-500 font-bold mt-2"></p>
           </div>
           <div>
             <p class="text-xl">despesas</p>
@@ -162,7 +329,7 @@ async function deleteItem(endp: string, id: string) {
         </div>
         <div class="dashCard bg-yellow-500 w-96 h-52 p-10 rounded-xl">
           <div class="mb-3">
-            <p class="inline text-4xl border-b-4 border-gray-500 font-bold mt-2">R$ <span class="">0,00</span></p>
+            <p class="totalReceber inline text-2xl border-b-4 border-gray-500 font-bold mt-2"></p>
           </div>
           <div>
             <p class="text-xl">a receber</p>
@@ -177,19 +344,19 @@ async function deleteItem(endp: string, id: string) {
             <p class="border-b border-gray-300 mb-1 text-xl font-bold">Receitas</p>
           </div>
         </div>
-        <div v-for="(item, index) of allReceitas" :key="index" class="receitas flex flex-col gap-2">
+        <div v-for="(item, index) of allReceitas.reverse()" :key="index" class="receitas flex flex-col gap-2">
           <!-- Receita 1 -->
           <div class="receita border bg-green-200 border-gray-300 px-5 py-2 w-full mb-1 flex items-center justify-between">
             <div v-for="(receita, i) of item.receitas" :key="i" class="flex flex-col justify-between">
               <div>
-                <p>{{ receita.valor }}</p>
+                <p>{{ receita.valor.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}) }}</p>
               </div>
               <div class="mt-1">
                 <p class="truncate w-60 first-letter:uppercase"><span class="font-bold">Nota:</span> {{ receita.nota }}</p>
               </div>
             </div>
             <div class="flex gap-5">
-              <a class="hover:bg-green-600 duration-300 w-8 h-8 flex items-center justify-center rounded-full" href="#">
+              <a @click="updateItem('receitas', item._id)" class="hover:bg-green-600 duration-300 w-8 h-8 flex items-center justify-center rounded-full" href="#">
                 <i class="pi pi-pencil"></i>
               </a>
               <a @click="deleteItem('receitas', item._id)" class="hover:bg-green-600 duration-300 w-8 h-8 flex items-center justify-center rounded-full" href="#">
@@ -216,18 +383,18 @@ async function deleteItem(endp: string, id: string) {
             <p class="border-b border-gray-300 mb-1 text-xl font-bold">Despesas</p>
           </div>
         </div>
-        <div v-for="(item, index) of allDespesas" :key="index" class="despesas flex flex-col gap-2">
+        <div v-for="(item, index) of allDespesas.reverse()" :key="index" class="despesas flex flex-col gap-2">
           <div class="border bg-red-200 border-gray-300 px-5 py-2 mb-1 w-full flex items-center justify-between">
             <div v-for="(despesa, i) of item.despesas" :key="i" class="flex flex-col justify-between">
               <div>
-                <p>{{ despesa.valor }}</p>
+                <p>{{ despesa.valor.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}) }}</p>
               </div>
               <div class="mt-1">
                 <p class="truncate w-60"><span class="font-bold">Nota:</span> {{ despesa.nota }}</p>
               </div>
             </div>
             <div class="flex gap-5">
-              <a class="hover:bg-red-600 duration-300 w-8 h-8 flex items-center justify-center rounded-full" href="#">
+              <a @click="updateItem('despesas', item._id)" class="hover:bg-red-600 duration-300 w-8 h-8 flex items-center justify-center rounded-full" href="#">
                 <i class="pi pi-pencil"></i>
               </a>
               <a @click="deleteItem('despesas', item._id)" class="hover:bg-red-600 duration-300 w-8 h-8 flex items-center justify-center rounded-full" href="#">
@@ -255,18 +422,18 @@ async function deleteItem(endp: string, id: string) {
             <p class="border-b border-gray-300 mb-1 text-xl font-bold">A receber</p>
           </div>
         </div>
-        <div v-for="(item, index) of allReceber" :key="index" class="despesas flex flex-col gap-2">
+        <div v-for="(item, index) of allReceber.reverse()" :key="index" class="despesas flex flex-col gap-2">
           <div class="receita-1 border bg-yellow-200 border-gray-300 px-5 py-2 mb-1 w-full flex items-center justify-between">
             <div v-for="(receb, i) of item.receber" :key="i" class="flex flex-col justify-between">
               <div>
-                <p>{{ receb.valor }}</p>
+                <p>{{ receb.valor.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}) }}</p>
               </div>
               <div class="mt-1">
                 <p class="truncate w-60"><span class="font-bold">Nota:</span> {{ receb.nota }}</p>
               </div>
             </div>
             <div class="flex gap-5">
-              <a class="hover:bg-yellow-600 duration-300 w-8 h-8 flex items-center justify-center rounded-full" href="#">
+              <a @click="updateItem('receber', item._id)" class="hover:bg-yellow-600 duration-300 w-8 h-8 flex items-center justify-center rounded-full" href="#">
                 <i class="pi pi-pencil"></i>
               </a>
               <a @click="deleteItem('receber', item._id)" class="hover:bg-yellow-600 duration-300 w-8 h-8 flex items-center justify-center rounded-full" href="#">
