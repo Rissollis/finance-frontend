@@ -17,6 +17,7 @@ module.exports = {
         smokyBlack: "#131200",
         midnightGreen: "#095256",
         maroon: "#FFFBF0",
+        modalBackground: "#00000018"
       },
       padding: {
         "17px": "0.7rem"
