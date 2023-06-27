@@ -290,17 +290,18 @@ async function updateRequest(endp: string, id: string, body: any) {
 <template>
   <main class="bg-slate-200 py-5 relative">
     <div class="modalContainer hidden bottom-0 absolute w-full h-full flex justify-center items-center bg-modalBackground">
-      <div class="w-2/5 bg-white h-96 relative p-20 flex justify-center items-center">
-        <div class="">
-          <div class="">
-            <div class="">
-              <input type="number" name="" id="inputValor" class="border border-black mb-2 px-1 outline-none" placeholder="Informe o valor">
+      <div class="w-2/6 bg-white h-96 relative flex justify-center items-center flex-col">
+        <img class="mb-10 w-80" src="/icons/logo-finance-2.png" />
+        <div class="w-full flex justify-center">
+          <div class="w-full flex flex-col items-center">
+            <div class="w-full flex justify-center">
+              <input type="number" name="" id="inputValor" class="border border-black mb-2 px-1 outline-none w-3/5" placeholder="Informe o valor">
             </div>
-            <div class="">
-              <input type="text" name="" id="inputNota" class="border border-black mb-3 px-1 outline-none" placeholder="Informe uma nota">
+            <div class="w-full flex justify-center">
+              <input type="text" name="" id="inputNota" class="border border-black mb-3 px-1 outline-none w-3/5" placeholder="Informe uma nota">
             </div>
-            <div class="submitFinancas flex justify-center">
-              <button class="px-8 py-2 bg-lightSeaGreen text-white">Informar finança</button>
+            <div class="submitFinancas flex justify-center mt-8">
+              <button class="px-8 py-2 bg-lightSeaGreen text-white hover:bg-teal-400 active:bg-teal-600">Informar finança</button>
             </div>
           </div>
         </div>
@@ -454,6 +455,5 @@ async function updateRequest(endp: string, id: string, body: any) {
         </div>
       </div>
     </section>
-    <section></section>
   </main>
 </template>
