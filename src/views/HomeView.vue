@@ -7,7 +7,6 @@
       <div class=" space-y-6 px-20 flex flex-col justify-around">
         <div class="relative w-4/5">
           <h1 class="text-5xl font-semibold text-midnightGreen"><span class="text-lightSeaGreen">O controle</span> total das suas finanças na palma da sua mão</h1>
-          <!-- <img src="https://organizze.com.br/build/_assets/traced-border@2x-BLHJJMC7.png" alt="" class="absolute w-60 top-11"> -->
         </div>
         <div>
           <p>
@@ -15,7 +14,7 @@
           </p>
         </div>
         <div>
-          <router-link to="/about">
+          <router-link to="/dashboard">
             <button class="bg-midnightGreen text-white px-5 py-4 rounded-xl hover:bg-lightSeaGreen ease-in-out duration-300">Organizar minhas finanças <i class="pi pi-arrow-right ml-2 bg-lightSeaGreen rounded-lg p-3"></i></button>
           </router-link>
         </div>
@@ -38,20 +37,11 @@
           </div>
         </div>
       </div>
-      <!-- <div>
-        <img src="https://organizze.com.br/build/_assets/hero-mockup-app-organizze-OSCC5ZCI.webp" alt="protótipo do site">
-      </div> -->
     </section>
 
     <section class="px-48 py-12">
       <div class="flex">
-        <!-- <div>
-          <img src="https://organizze.com.br/build/_assets/phone01-QOE2JQZC.webp" alt="">
-        </div> -->
         <div>
-          <!-- <div>
-            <p class="font-extralight">Organize suas finanças</p>
-          </div> -->
           <div>
             <h1 class="text-midnightGreen text-right font-bold text-5xl my-6">O guia para o seu sucesso financeiro</h1>
           </div>
@@ -120,9 +110,6 @@
     <section class="px-48 py-12">
       <div class="flex items-center">
         <div>
-          <!-- <div>
-            <p>Segurança em primeiro lugar</p>
-          </div> -->
           <div class="w-3/4">
             <h1 class="mt-3 mb-10 text-5xl text-lightSeaGreen">A segurança que você precisa para evoluir a sua gestão</h1>
           </div>
@@ -168,26 +155,21 @@
               </div>
             </div>
             <div>
-              <router-link to="/">
+              <router-link to="/dashboard">
                 <button class="bg-midnightGreen text-white w-56 h-12 rounded-lg hover:bg-lightSeaGreen duration-300">Gerenciar finanças</button>
               </router-link>
             </div>
           </div>
         </div>
-        <!-- <div>
-          <div>
-            <img src="https://organizze.com.br/build/_assets/organizzeTamplateWeb-B3IDUPTB.png" alt="modelo dashboard">
-          </div>
-        </div> -->
       </div>
     </section>
 
     <section class="px-20 py-12 bg-slate-100">
       <div>
-        <div class="mb-10">
-          <!-- <div class="text-center">
+        <div class="mt-24 mb-10">
+          <div class="text-center">
             <p>Controle total</p>
-          </div> -->
+          </div>
           <div class="text-center text-midnightGreen text-4xl font-bold">
             <h1>Você, no controle das suas finanças</h1>
           </div>
